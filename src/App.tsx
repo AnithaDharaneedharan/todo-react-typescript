@@ -20,7 +20,7 @@ const App: React.FC = () => {
   }
 
   const addTodo: AddTodo = newTodo => {
-    setTodods([...todos, {text: newTodo, complete: false}])
+    newTodo.trim() !== "" && setTodods([...todos, {text: newTodo, complete: false}])
   }
 
   return (
